@@ -1,5 +1,5 @@
 # testing__version-service
-a simple carbon service that serves up its version
+A simple carbon service that serves up its version.
 
 To generate a new version of the service, run:
 
