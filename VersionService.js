@@ -11,7 +11,7 @@ __(function() {
       version: o({
         _type: carbon.carbond.Endpoint,
         get: function(req) {
-          return { version: "v1.0.0" }
+          return { version: "v2.0.0" }
         }
       }),
       status: o({
