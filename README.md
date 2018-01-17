@@ -22,3 +22,5 @@ $ curl localhost:8080/version
 ```
 
 This will also commit `VersionService.js` and tag the commit with the version.
+
+Don't forget to run `git push --tags`.
