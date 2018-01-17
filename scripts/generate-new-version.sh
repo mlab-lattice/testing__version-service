@@ -10,7 +10,8 @@ cd ${DIR}/..
 SERVICE_FILE=VersionService.js
 VERSION=${1}
 
-if (git rev-parse -q --verify "refs/tags/${VERSION}" > /dev/null); then
+# https://stackoverflow.com/questions/17790123/shell-script-trying-to-validate-if-a-git-tag-exists-in-a-git-repository-in-an
+if git rev-parse -q --verify "refs/tags/${VERSION}" > /dev/null; then
     echo "Version ${VERSION} already exists"
     exit 1
 fi
