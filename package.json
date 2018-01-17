@@ -1,0 +1,7 @@
+{
+  "name": "hello-world",
+  "description": "Hello World API",
+  "dependencies": {
+    "carbon-io": "0.6.2"
+  }
+}
