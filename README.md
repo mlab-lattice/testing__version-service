@@ -1,2 +1,24 @@
 # testing__version-service
 a simple carbon service that serves up its version
+
+To generate a new version of the service, run:
+
+```
+./scripts/generate-new-version.sh <VERSION>
+```
+
+So for example creating `v2.0.0`:
+
+```
+$ ./scripts/generate-new-version.sh v2.0.0
+
+$ node VersionService.js
+
+$ curl localhost:8080/status
+{"ok":true}
+
+$ curl localhost:8080/version
+{"version":"v2.0.0"}
+```
+
+This will also commit `VersionService.js` and tag the commit with the version.
