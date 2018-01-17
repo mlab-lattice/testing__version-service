@@ -11,7 +11,7 @@ SERVICE_FILE=VersionService.js
 VERSION=${1}
 
 if (git rev-parse -q --verify "refs/tags/${VERSION}" > /dev/null); then
-    echo "version already exists"
+    echo "Version ${VERSION} already exists"
     exit 1
 fi
 
