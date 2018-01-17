@@ -1,6 +1,6 @@
 {
-  "name": "hello-world",
-  "description": "Hello World API",
+  "name": "testing__version-service",
+  "description": "Version Service",
   "dependencies": {
     "carbon-io": "0.6.2"
   }
