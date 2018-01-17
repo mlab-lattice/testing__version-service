@@ -29,7 +29,7 @@ __(function() {
       version: o({
         _type: carbon.carbond.Endpoint,
         get: function(req) {
-          return { version: "${1}" }
+          return { version: "${VERSION}" }
         }
       }),
       status: o({
@@ -44,5 +44,5 @@ __(function() {
 EOF
 
 git add ${SERVICE_FILE}
-git commit -m "version ${1}"
+git commit -m "version ${VERSION}"
 git tag -a ${VERSION} -m "version ${VERSION}"
