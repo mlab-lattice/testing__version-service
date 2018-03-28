@@ -10,7 +10,7 @@ __(() => {
     endpoints: {
       version: o({
         _type: carbon.carbond.Endpoint,
-        get: () => ({ version: "1.0.0" }),
+        get: () => ({ version: "2.0.0" }),
       }),
       status: o({
         _type: carbon.carbond.Endpoint,
