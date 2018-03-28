@@ -17,29 +17,25 @@ if git rev-parse -q --verify "refs/tags/${VERSION}" > /dev/null; then
 fi
 
 cat > ${SERVICE_FILE} << EOF
-var carbon = require('carbon-io')
-var o  = carbon.atom.o(module).main
-var _o = carbon.bond._o(module)
-var __ = carbon.fibers.__(module).main
+const carbon = require('carbon-io')
+const o  = carbon.atom.o(module).main
+const _o = carbon.bond._o(module)
+const __ = carbon.fibers.__(module)
 
-__(function() {
+__(() => {
   module.exports = o({
     _type: carbon.carbond.Service,
     port: _o('env:PORT') || 8080,
     endpoints: {
       version: o({
         _type: carbon.carbond.Endpoint,
-        get: function(req) {
-          return { version: "${VERSION}" }
-        }
+        get: () => ({ version: "${VERSION}" }),
       }),
       status: o({
         _type: carbon.carbond.Endpoint,
-        get: function(req) {
-          return { ok: true }
-        }
-      })
-    }
+        get: () => ({ ok: true }),
+      }),
+    },
   })
 })
 EOF
