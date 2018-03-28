@@ -7,10 +7,10 @@ To generate a new version of the service, run:
 ./scripts/generate-new-version.sh <VERSION>
 ```
 
-So for example creating `v2.0.0`:
+So for example creating `2.0.0`:
 
 ```
-$ ./scripts/generate-new-version.sh v2.0.0
+$ ./scripts/generate-new-version.sh 2.0.0
 
 $ node VersionService.js
 
@@ -18,7 +18,7 @@ $ curl localhost:8080/status
 {"ok":true}
 
 $ curl localhost:8080/version
-{"version":"v2.0.0"}
+{"version":"2.0.0"}
 ```
 
 This will also commit `VersionService.js` and tag the commit with the version.
