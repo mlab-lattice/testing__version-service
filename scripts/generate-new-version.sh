@@ -25,6 +25,7 @@ const __ = carbon.fibers.__(module)
 __(() => {
   module.exports = o({
     _type: carbon.carbond.Service,
+    gracefulShutdown: false,
     port: _o('env:PORT') || 8080,
     endpoints: {
       version: o({
