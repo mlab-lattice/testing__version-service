@@ -1,0 +1,36 @@
+$parameters:
+  node_pool:
+    type: string
+  num_instances:
+    type: number
+    default: 3
+
+type: v1/service
+
+ports:
+  "8080":
+    protocol: HTTP
+
+build:
+  base_image:
+    repository: "library/node"
+    tag: "boron"
+  command:
+  - npm
+  - install
+
+exec:
+  command:
+  - node
+  - VersionService.js
+  environment:
+    PORT: "8080"
+    VERSION: 1.0.0
+
+health_check:
+  http:
+    port: 8080
+    path: /status
+
+node_pool: ${node_pool}
+num_instances: ${num_instances}
